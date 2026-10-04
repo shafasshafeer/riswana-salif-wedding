@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Cinzel:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Cinzel:wght@400;600&family=Amiri:wght@400;700&display=swap');
 
 :root {
   --lavender-light: #f8f6fc;
@@ -22,9 +22,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -34,13 +32,9 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3 {
-  font-family: 'Cormorant Garamond', serif;
-}
-
-.script-font {
-  font-family: 'Great Vibes', cursive;
-}
+h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
+.script-font { font-family: 'Great Vibes', cursive; }
+.arabic-font { font-family: 'Amiri', serif; }
 
 .gold-text {
   background: linear-gradient(90deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
@@ -51,9 +45,7 @@ h1, h2, h3 {
   animation: shimmer 4s linear infinite;
 }
 
-@keyframes shimmer {
-  to { background-position: 200% center; }
-}
+@keyframes shimmer { to { background-position: 200% center; } }
 
 .reveal {
   opacity: 0;

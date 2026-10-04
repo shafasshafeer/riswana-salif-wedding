@@ -5,7 +5,7 @@ import './App.css';
 import heroBg from './assets/invitation-bg.webp';
 
 // 📍 Reusable location constants
-const VENUE_NAME = "RAK Plaza, Pulichod, Kerala";
+const VENUE_NAME = "RAK Plaza, Punnakka Bazar, Pulichod, Kerala";
 const VENUE_COORDS = "10.30056648982072,76.14907167479784";
 const VENUE_MAP_LINK = `https://www.google.com/maps/dir/?api=1&destination=${VENUE_COORDS}`;
 
@@ -32,7 +32,6 @@ function App() {
         el.style.transform = `translateY(${scrolled * speed}px)`;
       });
 
-      // ⬇️ GENTLE ZOOM — no more over-cropping faces
       if (heroBgEl) {
         const scale = 1 + Math.min(scrolled * 0.0001, 0.05);
         const translateY = scrolled * 0.15;
@@ -48,7 +47,7 @@ function App() {
   return (
     <div className="app">
       
-      {/* --- Sticky Nav --- */}
+      {/* --- Nav --- */}
       <nav className="navbar">
         <div className="nav-links">
           <a href="#home">Home</a>
@@ -92,21 +91,21 @@ function App() {
           <p className="hero-intro">We are getting married</p>
           <h1>Riswana</h1>
           <div className="ampersand">&</div>
-          <h1>Muhammed Salif</h1>
+          <h1>Mohammed Salif</h1>
           <p className="gold-text hero-hashtag">#RiswanaWedsSalif</p>
         </div>
 
         <div className="scroll-indicator">Scroll</div>
       </section>
 
-      {/* --- QURANIC VERSE --- */}
+      {/* --- QURANIC VERSE (from image: Quran 8:63) --- */}
       <section className="verse-section">
         <div className="container">
           <Star className="text-gold" size={32} style={{margin: '0 auto 25px', display: 'block'}} />
           <p className="verse-text reveal">
-            "And among His signs is this, that He created for you mates from among yourselves, that you may dwell in tranquility with them, and He has put love and mercy between your hearts."
+            "And He has united their hearts. If you had spent all that is in the earth, you could not have united their hearts, but Allah has united them."
           </p>
-          <p className="verse-ref reveal">Surah Ar-Rum 30:21</p>
+          <p className="verse-ref reveal">Surah Al-Anfal 8:63</p>
         </div>
       </section>
 
@@ -115,6 +114,44 @@ function App() {
         
         <div className="invitation-geometric"></div>
         
+        {/* Left side quotes (from image) */}
+        <div className="side-quote left">
+          WITH<br/>
+          FAITH<br/>
+          LOVE<br/>
+          FAMILY<br/>
+          FOREVER
+          <div className="quote-line"></div>
+        </div>
+        
+        {/* Right side top quote */}
+        <div className="side-quote right">
+          <span className="arabic-tag">﷽</span>
+          AND HE<br/>
+          UNITED THEIR<br/>
+          HEARTS
+          <div className="quote-line"></div>
+          <div className="verse-small">(QURAN 8:63)</div>
+        </div>
+        
+        {/* Right side bottom quote */}
+        <div className="side-quote bottom-right">
+          TWO<br/>
+          SOULS<br/>
+          ONE<br/>
+          JOURNEY<br/>
+          UNDER<br/>
+          HIS<br/>
+          GUIDANCE
+          <div className="quote-line"></div>
+          GOOD<br/>
+          PEOPLE<br/>
+          BRING<br/>
+          GOOD<br/>
+          BLESSINGS
+          <div className="quote-line"></div>
+        </div>
+
         <div className="container">
           <div className="invitation-card-wrapper reveal-scale">
             
@@ -123,13 +160,16 @@ function App() {
             <div className="corner-flourish bl"></div>
             <div className="corner-flourish br"></div>
 
+            {/* Arabic calligraphy "محمد" (Muhammad) */}
+            <div className="arabic-calligraphy">محمد</div>
+
             <svg className="crescent-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
               <path d="M50 10 C30 10, 15 30, 15 50 C15 70, 30 90, 50 90 C38 82, 30 68, 30 50 C30 32, 38 18, 50 10 Z" fill="#ffffff"/>
               <polygon points="65,35 68,45 78,45 70,52 73,62 65,55 57,62 60,52 52,45 62,45" fill="#ffffff"/>
             </svg>
 
-            <p className="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
-            <p className="invitation-label">In the name of Allah, the Most Gracious, the Most Merciful</p>
+            <p className="bismillah">In the Name of Allah</p>
+            <p className="assalam">Assalamu 'Alaikum</p>
 
             <div className="elegant-divider">
               <div className="line"></div>
@@ -139,26 +179,25 @@ function App() {
 
             <p className="invitation-intro">
               Together with their families,<br/>
-              we joyfully invite you to the<br/>
-              <strong>Wedding Reception</strong>
+              we joyfully invite you to the
             </p>
 
- <div className="parents-info">
+            <h2 className="wedding-reception-title">WEDDING RECEPTION</h2>
+            <p className="of-text">of</p>
+
+            <div className="parents-info">
               S/o Mr. Sathar C.K. & Mrs. Faseela Sathar<br/>
-              Chemboothum Parambil (H), Mathilakam<br/>
+              Chembothumparambil (H), Mathilakam<br/>
               Ph : 9048616068
             </div>
 
-            <div className="couple-names-large">Muhammed Salif</div>
+            <div className="couple-names-large">Mohammed Salif</div>
             <div className="with-text">with</div>
             <div className="couple-names-large">Riswana</div>
 
-           
-
-            <div className="elegant-divider">
-              <div className="line"></div>
-              <div className="diamond"></div>
-              <div className="line"></div>
+            <div className="bride-family-info">
+              D/o Mr. Illyas N. S. & Mrs. Usaiba Illyas<br/>
+              Chaimoolayil (H), Vattekunnam
             </div>
 
             <p className="request-text">
@@ -184,14 +223,14 @@ function App() {
                 <div className="hex-icon-box">
                   <MapPin size={26} />
                 </div>
-                <p>Rak Plaza<br/><span>Pulichod</span></p>
+                <p>Rak Plaza<br/><span>Punnakka Bazar</span></p>
               </a>
 
               <div className="hex-item">
                 <div className="hex-icon-box">
                   <Clock size={26} />
                 </div>
-                <p>Reception Time<br/><span>6.00 pm</span></p>
+                <p>Reception Time<br/><span>6.00 pm – 9.00 pm</span></p>
               </div>
             </div>
 
@@ -202,9 +241,8 @@ function App() {
             </div>
 
             <div className="blessing-text">
-              May Allah Bless you both and unite<br/>
-              you in goodness<br/>
-              <span style={{fontSize: '0.9em', opacity: 0.8}}>(Quran 30:21)</span>
+              May Allah bless you both and unite<br/>
+              you in goodness. Ameen.
             </div>
 
             <div className="elegant-divider">
@@ -235,7 +273,7 @@ function App() {
               <Calendar className="event-icon" size={45} />
               <h3>Reception</h3>
               <p>Sunday, 25th October 2026</p>
-              <p style={{marginTop: '12px', fontSize: '0.9rem', color: '#7e57c2', fontWeight: '600', letterSpacing: '1px'}}>6:00 PM ONWARDS</p>
+              <p style={{marginTop: '12px', fontSize: '0.9rem', color: '#7e57c2', fontWeight: '600', letterSpacing: '1px'}}>6:00 PM – 9:00 PM</p>
             </div>
 
             <a 
@@ -248,8 +286,8 @@ function App() {
               <MapPin className="event-icon" size={45} />
               <h3>Venue</h3>
               <p><strong>Rak Plaza</strong></p>
-              <p>Pulichod</p>
-              <p style={{marginTop: '12px', fontSize: '0.9rem', color: '#7e57c2', fontWeight: '600', letterSpacing: '1px'}}>KERALA, INDIA</p>
+              <p>Punnakka Bazar</p>
+              <p style={{marginTop: '12px', fontSize: '0.9rem', color: '#7e57c2', fontWeight: '600', letterSpacing: '1px'}}>PULICHOD, KERALA</p>
               <span className="click-tag">Tap for Directions</span>
             </a>
           </div>
@@ -261,7 +299,7 @@ function App() {
         <div className="container text-center">
           <Navigation className="text-gold reveal" size={35} style={{margin: '0 auto 20px', display: 'block'}} />
           <h2 className="script-font reveal" style={{fontSize: 'clamp(2.5rem, 6vw, 4rem)', color: '#fff'}}>Find Your Way</h2>
-          <p className="reveal" style={{color: '#d1c4e9', letterSpacing: '4px', fontSize: '0.8rem', textTransform: 'uppercase'}}>Rak Plaza, Pulichod</p>
+          <p className="reveal" style={{color: '#d1c4e9', letterSpacing: '4px', fontSize: '0.8rem', textTransform: 'uppercase'}}>Rak Plaza, Punnakka Bazar</p>
           
           <div className="map-container reveal-scale">
             <iframe 
@@ -272,7 +310,7 @@ function App() {
               allowFullScreen="" 
               loading="lazy" 
               referrerPolicy="strict-origin-when-cross-origin"
-              title="Wedding Venue Map - RAK Plaza, Pulichod"
+              title="Wedding Venue Map - RAK Plaza, Punnakka Bazar"
             ></iframe>
           </div>
           <div style={{marginTop: '40px'}} className="reveal">
@@ -292,10 +330,10 @@ function App() {
       <footer className="footer">
         <div className="container">
           <Heart color="var(--gold)" size={32} style={{marginBottom: '20px'}} />
-          <h3 className="script-font reveal" style={{fontSize: 'clamp(2rem, 5vw, 3rem)', color: 'var(--lavender-deep)'}}>Riswana & Muhammed Salif</h3>
+          <h3 className="script-font reveal" style={{fontSize: 'clamp(2rem, 5vw, 3rem)', color: 'var(--lavender-deep)'}}>Riswana & Mohammed Salif</h3>
           <p className="reveal" style={{color: '#666', marginTop: '15px', fontSize: '0.9rem', fontWeight: '300'}}>We look forward to celebrating with you. Insha'Allah.</p>
           <div style={{margin: '30px auto', width: '80px', height: '2px', background: 'linear-gradient(to right, transparent, var(--gold), transparent)'}}></div>
-          <p style={{color: '#999', fontSize: '0.8rem', letterSpacing: '1px'}}>Made with Love © 2024</p>
+          <p style={{color: '#999', fontSize: '0.8rem', letterSpacing: '1px'}}>Made with Love © 2026</p>
         </div>
       </footer>
 
